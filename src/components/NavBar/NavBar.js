@@ -1,4 +1,5 @@
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = props => {
     return (
@@ -9,6 +10,8 @@ const NavBar = props => {
                     <li><a href="index.html">{props.link1}</a></li>
                     <li><a href="index.html">{props.link2}</a></li>
                     <li><a href="index.html">{props.link3}</a></li>
+                    <li><a href="index.html">{props.link4}</a></li>
+                    <CartWidget />
                 </ul>
             </div>
         </nav>
