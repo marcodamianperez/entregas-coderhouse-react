@@ -2,6 +2,7 @@
 :root {
     /* colors */
     --color-grey-text: #777;
+    --color-light-grey: #ececec;
 }
 
 *,
@@ -12,6 +13,6 @@
     box-sizing: border-box;
 }
 
-html {
+/* html {
     font-size: 62.5%;
-}
+} */

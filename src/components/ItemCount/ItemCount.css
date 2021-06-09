@@ -1,0 +1,15 @@
+.item-count-container {
+    background-color: var(--color-light-grey);
+    padding: 1rem;
+    width: 15rem;
+    text-align: center;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+span {
+    user-select: none;
+}
