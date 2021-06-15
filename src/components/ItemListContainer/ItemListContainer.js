@@ -1,4 +1,5 @@
 import { ItemCount } from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
@@ -8,7 +9,10 @@ const ItemListContainer = () => {
     }
 
     return(
-        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+        <>
+            <ItemList />
+            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+        </>
     );
 }
 
