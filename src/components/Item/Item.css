@@ -1,3 +1,10 @@
 .product-img {
     width: 6rem;
 }
+
+.product-card {
+    border: 1px solid var(--color-grey-text);
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}

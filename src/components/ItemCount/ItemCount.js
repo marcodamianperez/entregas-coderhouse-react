@@ -14,7 +14,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     return (
-        <div className='item-count-container d-grid gap-2'>
+        <div className='item-count-container d-grid gap-2 m-auto'>
             <div className='d-flex justify-content-between mb-2 text-primary'>
                 <i className="far fa-minus-square icon" onClick={removeItem}></i>
                 <span className='text-secondary'>{items}</span>
