@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "categoryId": "1",
+        "title": "RFG17",
+        "description_short": "Llanta deportiva 17\" para auto",
+        "description_long": "Llanta de aleación acero-aluminio, medida 17\", con centro intercambiable. Disponible en colores: Teja, Aluminio, Gloss Black",
+        "price": 790,
+        "pictureUrl": "ImagePlaceholder"
+    },
+    {
+        "id": "2",
+        "categoryId": "1",
+        "title": "RFG15",
+        "description_short": "Llanta deportiva 15\" para auto",
+        "description_long": "Llanta de aleación acero templado, medida 15\", centro fijo. Disponible en colores: Mate Black, Aluminio, Gloss Black, Green",
+        "price": 520,
+        "pictureUrl": "ImagePlaceholder"
+    },
+    {
+        "id": "3",
+        "categoryId": "1",
+        "title": "RFG18",
+        "description_short": "Llanta deportiva 18\" para auto",
+        "description_long": "Llanta de aleación aluminio-carbono, medida 18\", con centro intercambiable. Disponible en colores: Pearl White, Aluminio, Gloss Black",
+        "price": 960,
+        "pictureUrl": "ImagePlaceholder"
+    },
+    {
+        "id": "4",
+        "categoryId": "2",
+        "title": "RFG16",
+        "description_short": "Llanta deportiva 16\" para camioneta",
+        "description_long": "Llanta de aleación acero-aluminio, medida 16\", con centro intercambiable. Disponible en colores: Custom",
+        "price": 600,
+        "pictureUrl": "ImagePlaceholder"
+    },
+    {
+        "id": "5",
+        "categoryId": "2",
+        "title": "RFG19",
+        "description_short": "Llanta deportiva 19\" para camioneta",
+        "description_long": "Llanta de aleación acero-aluminio-carbono, medida 19\", con centro intercambiable e incrustaciones metalizadas. Disponible en colores: Shiny Purple, Aluminio, Gloss Black",
+        "price": 1070,
+        "pictureUrl": "ImagePlaceholder"
+    }
+]

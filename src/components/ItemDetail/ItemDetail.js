@@ -1,8 +1,9 @@
 import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import pictureUrl from '../../assets/images/wheel-placeholder-800x800.png';
 
-const ItemDetail = ({title, description, price, pictureUrl}) => {
+const ItemDetail = ({title, description, price}) => {
 
     const onAdd = (amount, stock) => {
         amount <= stock ? alert(`Compraste ${amount} producto(s)`) : alert('No hay stock disponible para este producto');

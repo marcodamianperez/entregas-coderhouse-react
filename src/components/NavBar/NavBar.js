@@ -1,12 +1,15 @@
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const NavBar = props => {
+
     return (
         
             <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
                 <div className='container'>
-                    <a href='index.html' className='navbar-brand'>{props.logo}</a>
+                    <NavLink to={'/'} className='navbar-brand'>{props.logo}</NavLink>
                     <button
                         className='navbar-toggler'
                         type='button'
@@ -21,16 +24,10 @@ const NavBar = props => {
                     <div className='collapse navbar-collapse' id='toggleMobileMenu'>
                         <ul className='navbar-nav text-center ms-auto'>
                             <li>
-                                <a className='nav-link' href='index.html'>{props.link1}</a>
+                                <NavLink exact activeClassName='active' className='nav-link' to={"/category/1"}>{props.link1}</NavLink>
                             </li>
                             <li>
-                                <a className='nav-link' href='index.html'>{props.link2}</a>
-                            </li>
-                            <li>
-                                <a className='nav-link' href='index.html'>{props.link3}</a>
-                            </li>
-                            <li>
-                                <a className='nav-link' href='index.html'>{props.link4}</a>
+                                <NavLink exact activeClassName='active' className='nav-link' to={"/category/2"}>{props.link2}</NavLink>
                             </li>
                             <CartWidget />
                         </ul>

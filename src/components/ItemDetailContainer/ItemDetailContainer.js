@@ -1,25 +1,36 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import pictureUrl from '../../assets/images/wheel-placeholder-800x800.png';
+import Spinner from '../Spinner/Spinner';
+import { useParams } from 'react-router';
 
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState({});
+    const [loading, setLoading] = useState(true);
+    const { id } = useParams();
 
-    const getItem = () => {
-        fetch('dummyJson/product.json')
+    const getProduct = () => {
+        fetch('../productList.json')
             .then(response => response.json())
-            .then(data => setProduct(data));
+            .then(data => {
+                const prod = data.find(p => p.id === id);
+                return setProduct(prod)
+            })
+            .finally(() => setLoading(false));
     }
 
     useEffect(() => {
         setTimeout(() => {
-            getItem();
+            getProduct();
         }, 2000);
     }, []);
 
     return (
-        <ItemDetail title={product.title} description={product.description} price={product.price} pictureUrl={pictureUrl} />
+        loading ? (
+            <Spinner />
+        ) : (
+            <ItemDetail title={product.title} description={product.description_long} price={product.price} />
+        )
     )
 };
 
