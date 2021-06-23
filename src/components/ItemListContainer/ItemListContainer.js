@@ -7,14 +7,14 @@ const ItemListContainer = ({heading}) => {
 
     const [products, setProducts] = useState([{}]);
     const [loading, setLoading] = useState(true);
-    const { categoryId } = useParams();
+    const { category } = useParams();
 
     const getProductList = () => {
         fetch('../productList.json')
             .then(response => response.json())
             .then(data => {
-                if (categoryId !== undefined) {
-                    const filteredData = data.filter(prod => prod.categoryId === categoryId);
+                if (category !== undefined) {
+                    const filteredData = data.filter(prod => prod.category === category);
                     return setProducts(filteredData);
                 } else {
                     return setProducts(data);
@@ -27,7 +27,7 @@ const ItemListContainer = ({heading}) => {
         setTimeout(() => {
             getProductList();
         }, 2000);
-    }, [categoryId]);
+    }, [category]);
 
 
     return(

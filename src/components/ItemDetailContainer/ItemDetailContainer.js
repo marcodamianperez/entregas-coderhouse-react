@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
 import { useParams } from 'react-router';
+import pictureUrl from '../../assets/images/wheel-placeholder-800x800.png';
 
 const ItemDetailContainer = () => {
 
@@ -29,7 +30,7 @@ const ItemDetailContainer = () => {
         loading ? (
             <Spinner />
         ) : (
-            <ItemDetail title={product.title} description={product.description_long} price={product.price} />
+            <ItemDetail title={product.title} description={product.description_long} price={product.price} pictureUrl={pictureUrl}/>
         )
     )
 };

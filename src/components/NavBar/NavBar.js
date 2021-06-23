@@ -1,7 +1,6 @@
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = props => {
 
@@ -24,10 +23,10 @@ const NavBar = props => {
                     <div className='collapse navbar-collapse' id='toggleMobileMenu'>
                         <ul className='navbar-nav text-center ms-auto'>
                             <li>
-                                <NavLink exact activeClassName='active' className='nav-link' to={"/category/1"}>{props.link1}</NavLink>
+                                <NavLink activeClassName='active' className='nav-link' to={"/category/cars"}>{props.link1}</NavLink>
                             </li>
                             <li>
-                                <NavLink exact activeClassName='active' className='nav-link' to={"/category/2"}>{props.link2}</NavLink>
+                                <NavLink activeClassName='active' className='nav-link' to={"/category/trucks"}>{props.link2}</NavLink>
                             </li>
                             <CartWidget />
                         </ul>
