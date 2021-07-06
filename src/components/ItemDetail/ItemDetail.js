@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({title, description, price, pictureUrl}) => {
 
-    const [cant, setCant] = useState(0);
-    const [hidden, setHidden] = useState(false);
+    const [finishBuy, setFinishBuy] = useState(false);
+    const { addItem } = useContext(CartContext);
 
     const onAdd = (amount, stock) => {
         if (amount <= stock) {
             alert(`Agregaste ${amount} producto(s) al carrito`)
-            setCant(amount);
-            setHidden(true);
+            setFinishBuy(true);
         } else {
             alert('No hay stock disponible para este producto');
         }
@@ -26,15 +26,11 @@ const ItemDetail = ({title, description, price, pictureUrl}) => {
                 <p>{title}</p>
                 <p>{description}</p>
                 <p>${price}</p>
-                {
-                    !hidden && <ItemCount stock={8} initial={1} onAdd={onAdd} />
-                }
-                {
-                    cant > 0 && <Link to={"/cart"}><button type="button" className="btn btn-primary">Finalizar compra</button></Link>
-                }
+                { finishBuy > 0 && <Link to={"/cart"}><button type="button" className="btn btn-primary" onClick={addItem}>Finalizar compra</button></Link> }
+                { !finishBuy && <ItemCount stock={8} initial={1} onAdd={onAdd} /> }
             </div>
         </div>
-    )
+        )
 }
 
 export default ItemDetail;

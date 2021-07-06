@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     const getProduct = () => {
-        fetch('../productList.json')
+        fetch('../json/productList.json')
             .then(response => response.json())
             .then(data => {
                 const prod = data.find(p => p.id === id);
@@ -29,9 +29,9 @@ const ItemDetailContainer = () => {
     return (
         loading ? (
             <Spinner />
-        ) : (
-            <ItemDetail title={product.title} description={product.description_long} price={product.price} pictureUrl={pictureUrl}/>
-        )
+            ) : (
+                <ItemDetail title={product.title} description={product.description_long} price={product.price} pictureUrl={pictureUrl}/>
+            )
     )
 };
 

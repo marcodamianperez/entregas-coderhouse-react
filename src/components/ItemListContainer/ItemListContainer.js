@@ -10,7 +10,7 @@ const ItemListContainer = ({heading}) => {
     const { category } = useParams();
 
     const getProductList = () => {
-        fetch('../productList.json')
+        fetch('../json/productList.json')
             .then(response => response.json())
             .then(data => {
                 if (category !== undefined) {
